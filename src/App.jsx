@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios'; 
+import './App.scss';
 const App = () => {
   const sendMessage = (event) => {
     event.preventDefault();
