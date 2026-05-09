@@ -1,14 +1,241 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.wrapper{
+
+/* Asosiy konteyner */
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  background: darkgrey;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Formaning o‘zi */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Umumiy label uslubi (barcha label'lar) */
+label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* .box ga qo‘shimcha – flex (siz berganingizdek) */
+.box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ecf0f1;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Input maydonlari */
+input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background: #fefefe;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Tugma */
+button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 8px;
+}
+
+button:hover {
+  background: #27ae60;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ========== MEDIA QUERIES ========== */
+/* 800px gacha */
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 12px;
+  }
+  form {
+    padding: 16px;
+    gap: 12px;
+  }
+  label {
+    font-size: 0.95rem;
+  }
+  input {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+  button {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* 600px gacha */
+@media (max-width: 600px) {
+  .wrapper {
+    max-width: 100%;
+    margin: 0 8px;
+    border-radius: 8px;
+  }
+  form {
+    padding: 12px;
+    gap: 10px;
+  }
+  .box {
+    padding: 6px 10px;
+    gap: 6px;
+    font-size: 0.9rem;
+  }
+  input {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  button {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* 400px gacha (mobil) */
+@media (max-width: 400px) {
+  .wrapper {
+    padding: 8px;
+  }
+  form {
+    padding: 10px;
+    gap: 10px;
+  }
+  label, .box {
+    font-size: 0.85rem;
+  }
+  input {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+  button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 250px gacha (juda kichik telefonlar) */
+@media (max-width: 250px) {
+  .wrapper {
+    padding: 4px;
+  }
+  form {
+    padding: 6px;
+    gap: 8px;
+  }
+  label, .box {
+    font-size: 0.75rem;
+    word-break: break-word;
+  }
+  input {
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+  button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  .box {
+    flex-direction: column;
+    text-align: center;
+    gap: 4px;
+  }
+}
+
+/* 150px gacha (minimal) */
+@media (max-width: 150px) {
+  .wrapper {
+    padding: 2px;
+  }
+  form {
+    padding: 4px;
+    gap: 6px;
+  }
+  label, .box, input, button {
+    font-size: 0.65rem;
+  }
+  input {
+    padding: 4px 6px;
+  }
+  button {
     width: 100%;
-    max-width: 1200px;
-    background: darkgrey;
-    margin: 0 auto;
+    padding: 4px 6px;
+  }
+  .box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
-.box{
-display: flex;
+
+/* 100px gacha (eng kichik) */
+@media (max-width: 100px) {
+  .wrapper {
+    padding: 2px;
+    border-radius: 4px;
+  }
+  form {
+    padding: 4px;
+    gap: 4px;
+  }
+  label, .box, input, button {
+    font-size: 0.55rem;
+  }
+  input {
+    padding: 2px 4px;
+  }
+  button {
+    padding: 2px 4px;
+  }
+  .box {
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+  }
+  /* Input va tugma to‘liq kenglikda */
+  input, button {
+    width: 100%;
+    min-width: 60px;
+  }
 }
