@@ -10,6 +10,7 @@ const Card = () => {
             <br />
             <label htmlFor="">telefon raqamingizni kirirting</label>
             <input type="number" id='number' placeholder='raqamingizni kirirting' />
+            <br />
             <button type='submit'>jonatish</button>
         </form>
     </div>
