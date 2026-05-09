@@ -1,12 +1,11 @@
 import React from 'react';
-import axios from 'axios'; // <-- to‘g‘ri import
-
+import axios from 'axios'; 
 const App = () => {
   const sendMessage = (event) => {
     event.preventDefault();
     const token = "8765397823:AAG5pg9Fxxo3rjFyFQKZyyA2SU-II5Y2zk0";
     const chat_id = 6660879147;
-    const url = `https://api.telegram.org/bot${token}/sendMessage`; // <-- tuzatildi
+    const url = `https://api.telegram.org/bot${token}/sendMessage`; 
 
     const name = document.getElementById("text").value;
     const phone = document.getElementById("number").value;
@@ -23,7 +22,7 @@ const App = () => {
     .then(() => {
       alert("Xabar yuborildi");
     })
-    .catch((err) => {  // <-- err parametri qo‘shildi
+    .catch((err) => {  
       console.log(err);
     });
   };
