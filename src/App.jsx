@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import axios from 'axios'; 
 import './App.css';
 const App = () => {
@@ -29,9 +29,9 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className='wrapper'>
       <form onSubmit={sendMessage}>
-        <label>Ismingizni kiriting</label>
+        <label className='box'>Ismingizni kiriting</label>
         <input type="text" id="text" placeholder="ismingizni kiriting" />
         <br />
         <label>Telefon raqamingizni kiriting</label>
