@@ -4,8 +4,8 @@ import  'Card.scss'
 const Card = () => {
    
   return (
-    <div>
-        <form onSubmit={senMesage} action="" method="post">
+    <div className='wrapper'>
+        <form onSubmit={senMesage} action="" method="post" className='box'>
             <label htmlFor="">ismingizni kirirting</label>
             <input type="text" id='text' placeholder='ismingizni kirirting' />
             <br />
