@@ -6,7 +6,9 @@
 .wrapper{
     width: 100%;
     max-width: 1200px;
+    background: black;
     background: darkgrey;
+    margin: 0 auto;
 }
 .box{
 display: flex;
