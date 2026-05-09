@@ -35,7 +35,7 @@ const App = () => {
         <input type="text" id="text" placeholder="ismingizni kiriting..." required />
         <br />
         <label>Telefon raqamingizni kiriting*</label>
-        <input type="tel" id="number" placeholder="+998 123 45 67" required/>
+        <input type="number" id="number" placeholder="+998 123 45 67" required/>
         <br />
         <button type="submit">Jonatish</button>
       </form>
