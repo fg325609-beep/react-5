@@ -1,13 +1,15 @@
 import React from 'react'
 
 const Card = () => {
+   
   return (
     <div>
-        <form action="" method="post">
+        <form onSubmit={senMesage} action="" method="post">
             <label htmlFor="">ismingizni kirirting</label>
-            <input type="text" placeholder='ismingizni kirirting' />
+            <input type="text" id='text' placeholder='ismingizni kirirting' />
+            <br />
             <label htmlFor="">telefon raqamingizni kirirting</label>
-            <input type="number" placeholder='raqamingizni kirirting' />
+            <input type="number" id='number' placeholder='raqamingizni kirirting' />
             <button type='submit'>jonatish</button>
         </form>
     </div>
