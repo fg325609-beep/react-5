@@ -32,10 +32,10 @@ const App = () => {
     <div className='wrapper'>
       <form onSubmit={sendMessage}>
         <label className='box'>Ismingizni kiriting?</label>
-        <input type="text" id="text" placeholder="ismingizni kiriting..." />
+        <input type="text" id="text" placeholder="ismingizni kiriting..." required />
         <br />
         <label>Telefon raqamingizni kiriting</label>
-        <input type="tel" id="number" placeholder="+998 123 45 67" />
+        <input type="tel" id="number" placeholder="+998 123 45 67" required/>
         <br />
         <button type="submit">Jonatish</button>
       </form>
